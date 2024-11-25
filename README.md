@@ -1,4 +1,4 @@
-# OpenAI Scala Client 🤖
+# OpenAI Scala Client 🤖 - Pekko
 [![version](https://img.shields.io/badge/version-1.1.0-green.svg)](https://cequence.io) [![License](https://img.shields.io/badge/License-MIT-lightgrey.svg)](https://opensource.org/licenses/MIT) ![GitHub Stars](https://img.shields.io/github/stars/cequence-io/openai-scala-client?style=social) [![Twitter Follow](https://img.shields.io/twitter/follow/0xbnd?style=social)](https://twitter.com/0xbnd) ![GitHub CI](https://github.com/cequence-io/openai-scala-client/actions/workflows/continuous-integration.yml/badge.svg)
 
 This is a no-nonsense async Scala client for OpenAI API supporting all the available endpoints and params **including streaming**, the newest **chat completion**, **vision**, and **voice routines** (as defined [here](https://beta.openai.com/docs/api-reference)), provided in a single, convenient service called [OpenAIService](./openai-core/src/main/scala/io/cequence/openaiscala/service/OpenAIService.scala). The supported calls are: 
