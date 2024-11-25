@@ -1,6 +1,6 @@
 package io.cequence.openaiscala.service
 
-import akka.actor.ActorSystem
+import org.apache.pekko.actor.ActorSystem
 import com.google.inject.{Guice, Injector, Module}
 import com.typesafe.config.Config
 import scala.concurrent.duration._

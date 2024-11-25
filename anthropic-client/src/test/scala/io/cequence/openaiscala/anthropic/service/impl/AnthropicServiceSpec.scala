@@ -1,7 +1,7 @@
 package io.cequence.openaiscala.anthropic.service.impl
 
-import akka.actor.ActorSystem
-import akka.stream.Materializer
+import org.apache.pekko.actor.ActorSystem
+import org.apache.pekko.stream.Materializer
 import io.cequence.openaiscala.anthropic.domain.Message.UserMessage
 import io.cequence.openaiscala.anthropic.domain.settings.AnthropicCreateMessageSettings
 import io.cequence.openaiscala.anthropic.service._

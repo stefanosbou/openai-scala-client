@@ -1,6 +1,6 @@
 package io.cequence.openaiscala.examples.adapter
 
-import akka.stream.scaladsl.Sink
+import org.apache.pekko.stream.scaladsl.Sink
 import io.cequence.openaiscala.anthropic.service.AnthropicServiceFactory
 import io.cequence.openaiscala.domain.settings.CreateChatCompletionSettings
 import io.cequence.openaiscala.domain._

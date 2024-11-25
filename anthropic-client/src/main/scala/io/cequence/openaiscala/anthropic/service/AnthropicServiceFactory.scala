@@ -1,6 +1,6 @@
 package io.cequence.openaiscala.anthropic.service
 
-import akka.stream.Materializer
+import org.apache.pekko.stream.Materializer
 import io.cequence.openaiscala.anthropic.service.impl.{
   AnthropicServiceImpl,
   OpenAIAnthropicChatCompletionService

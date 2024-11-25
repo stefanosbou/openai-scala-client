@@ -1,7 +1,7 @@
 package io.cequence.openaiscala.service.adapter
 
-import akka.stream.Materializer
-import akka.stream.scaladsl.{Sink, Source}
+import org.apache.pekko.stream.Materializer
+import org.apache.pekko.stream.scaladsl.{Sink, Source}
 import io.cequence.wsclient.service.CloseableService
 import org.slf4j.LoggerFactory
 

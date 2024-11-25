@@ -1,7 +1,7 @@
 package io.cequence.openaiscala.service.impl
 
-import akka.NotUsed
-import akka.stream.scaladsl.Source
+import org.apache.pekko.NotUsed
+import org.apache.pekko.stream.scaladsl.Source
 import io.cequence.openaiscala.JsonFormats._
 import io.cequence.openaiscala.OpenAIScalaClientException
 import io.cequence.openaiscala.domain.BaseMessage

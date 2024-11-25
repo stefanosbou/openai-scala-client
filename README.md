@@ -56,12 +56,12 @@ Also try out our [Scala client for Pinecone vector database](https://github.com/
 
 ## Installation 🚀
 
-The currently supported Scala versions are **2.12, 2.13**, and **3**.  
+The currently supported Scala versions are **2.13**, and **3**.  
 
 To install the library, add the following dependency to your *build.sbt*
 
 ```
-"io.cequence" %% "openai-scala-client" % "1.1.0"
+"io.cequence" %% "openai-scala-client-pekko" % "1.1.0"
 ```
 
 or to *pom.xml* (if you use maven)
@@ -85,7 +85,7 @@ If you want streaming support, use `"io.cequence" %% "openai-scala-client-stream
 
 **I. Obtaining OpenAIService**
 
-First you need to provide an implicit execution context as well as akka materializer, e.g., as
+First you need to provide an implicit execution context as well as Pekko materializer, e.g., as
 
 ```scala
   implicit val ec = ExecutionContext.global

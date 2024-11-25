@@ -1,7 +1,7 @@
 package io.cequence.openaiscala.service.adapter
 
-import akka.actor.Scheduler
-import akka.stream.Materializer
+import org.apache.pekko.actor.Scheduler
+import org.apache.pekko.stream.Materializer
 import io.cequence.openaiscala.RetryHelpers.RetrySettings
 import io.cequence.openaiscala.Retryable
 import io.cequence.openaiscala.domain.BaseMessage

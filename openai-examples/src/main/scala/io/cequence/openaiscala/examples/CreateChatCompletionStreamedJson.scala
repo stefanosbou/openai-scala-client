@@ -1,6 +1,6 @@
 package io.cequence.openaiscala.examples
 
-import akka.stream.scaladsl.Sink
+import org.apache.pekko.stream.scaladsl.Sink
 import io.cequence.openaiscala.domain._
 import io.cequence.openaiscala.examples.fixtures.TestFixtures
 import io.cequence.openaiscala.service.{OpenAIServiceConsts, OpenAIServiceFactory}

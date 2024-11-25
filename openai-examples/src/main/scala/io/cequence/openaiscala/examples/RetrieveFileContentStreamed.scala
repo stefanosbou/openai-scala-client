@@ -15,7 +15,7 @@ object RetrieveFileContentStreamed extends Example {
 
       _ <- (fileInfoOption, sourceOption).zipped.headOption.map { case (fileInfo, source) =>
         source.runWith(
-          akka.stream.scaladsl.FileIO.toPath(Paths.get(fileInfo.filename))
+          org.apache.pekko.stream.scaladsl.FileIO.toPath(Paths.get(fileInfo.filename))
         )
       }.getOrElse(
         Future.failed(new Exception("File not found"))

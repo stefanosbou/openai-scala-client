@@ -1,7 +1,7 @@
 package io.cequence.openaiscala
 
-import akka.actor.{ActorSystem, Scheduler}
-import akka.testkit.TestKit
+import org.apache.pekko.actor.{ActorSystem, Scheduler}
+import org.apache.pekko.testkit.TestKit
 import io.cequence.openaiscala.RetryHelpers.{RetrySettings, delay, retry}
 import org.mockito.Mockito._
 import org.scalatestplus.mockito.MockitoSugar

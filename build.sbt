@@ -1,13 +1,10 @@
-import sbt.Keys.test
-
 // Supported versions
-val scala212 = "2.12.18"
-val scala213 = "2.13.11"
+val scala213 = "2.13.13"
 val scala3 = "3.2.2"
 
 ThisBuild / organization := "io.cequence"
-ThisBuild / scalaVersion := scala212
-ThisBuild / version := "1.1.1.RC.11"
+ThisBuild / scalaVersion := scala213
+ThisBuild / version := "1.1.1.RC.11-pekko"
 ThisBuild / isSnapshot := false
 
 lazy val commonSettings = Seq(
@@ -15,25 +12,19 @@ lazy val commonSettings = Seq(
   libraryDependencies += "org.scalatest" %% "scalatest" % "3.2.16" % Test,
   libraryDependencies += "org.scalatestplus" %% "mockito-4-11" % "3.2.16.0" % Test,
   libraryDependencies ++= extraTestDependencies(scalaVersion.value),
-  crossScalaVersions := List(scala212, scala213, scala3)
+  crossScalaVersions := List(scala213, scala3)
 )
 
 def extraTestDependencies(scalaVersion: String) =
   CrossVersion.partialVersion(scalaVersion) match {
-    case Some((2, 12)) =>
-      Seq(
-        "com.typesafe.akka" %% "akka-actor-testkit-typed" % "2.6.1" % Test
-      )
-
     case Some((2, 13)) =>
       Seq(
-        "com.typesafe.akka" %% "akka-actor-testkit-typed" % "2.6.20" % Test
+        "org.apache.pekko" %% "pekko-actor-testkit-typed" % "1.1.2" % Test
       )
 
     case Some((3, _)) =>
       Seq(
-        // because of conflicting cross-version suffixes 2.13 vs 3 - scala-java8-compat, etc
-        "com.typesafe.akka" % "akka-actor-testkit-typed_2.13" % "2.6.20" % Test
+        "org.apache.pekko" % "pekko-actor-testkit-typed_2.13" % "1.1.2" % Test
       )
 
     case _ =>

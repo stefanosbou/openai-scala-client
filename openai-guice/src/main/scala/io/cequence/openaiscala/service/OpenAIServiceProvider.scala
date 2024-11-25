@@ -1,6 +1,6 @@
 package io.cequence.openaiscala.service
 
-import akka.stream.Materializer
+import org.apache.pekko.stream.Materializer
 import com.typesafe.config.Config
 
 import javax.inject.{Inject, Provider}

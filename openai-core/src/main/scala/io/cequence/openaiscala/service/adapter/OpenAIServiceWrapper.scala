@@ -1,7 +1,7 @@
 package io.cequence.openaiscala.service.adapter
 
-import akka.stream.scaladsl.Source
-import akka.util.ByteString
+import org.apache.pekko.stream.scaladsl.Source
+import org.apache.pekko.util.ByteString
 import io.cequence.openaiscala.domain.Batch._
 import io.cequence.openaiscala.domain._
 import io.cequence.openaiscala.domain.response._

@@ -1,6 +1,6 @@
 package io.cequence.openaiscala.examples.nonopenai
 
-import akka.actor.Scheduler
+import org.apache.pekko.actor.Scheduler
 import io.cequence.openaiscala.OpenAIScalaClientTimeoutException
 import io.cequence.openaiscala.RetryHelpers.RetrySettings
 import io.cequence.openaiscala.anthropic.service.AnthropicServiceFactory
@@ -17,7 +17,7 @@ object AnthropicTestHelper {
 
   def timoutingService(
     implicit ec: ExecutionContext,
-    system: akka.actor.ActorSystem
+    system: org.apache.pekko.actor.ActorSystem
   ): OpenAIChatCompletionService = {
 
     // adapters to use (round-robin, retry, etc.)

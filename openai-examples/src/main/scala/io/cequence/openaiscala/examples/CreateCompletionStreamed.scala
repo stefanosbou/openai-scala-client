@@ -1,6 +1,6 @@
 package io.cequence.openaiscala.examples
 
-import akka.stream.scaladsl.Sink
+import org.apache.pekko.stream.scaladsl.Sink
 import io.cequence.openaiscala.service.OpenAIServiceFactory
 import io.cequence.openaiscala.service.OpenAIStreamedServiceImplicits._
 import io.cequence.openaiscala.service.StreamedServiceTypes.OpenAIStreamedService

@@ -1,7 +1,7 @@
 package io.cequence.openaiscala.vertexai.service.impl
 
-import akka.NotUsed
-import akka.stream.scaladsl.{Source, StreamConverters}
+import org.apache.pekko.NotUsed
+import org.apache.pekko.stream.scaladsl.{Source, StreamConverters}
 import com.google.cloud.vertexai.VertexAI
 import com.google.cloud.vertexai.api.GenerateContentResponse
 import com.google.cloud.vertexai.generativeai.GenerativeModel
@@ -19,8 +19,8 @@ import io.cequence.openaiscala.service.{
 }
 
 import java.util.concurrent.CompletableFuture
-import scala.collection.convert.ImplicitConversions.`seq AsJavaList`
-import scala.compat.java8.FutureConverters._
+import scala.jdk.CollectionConverters._
+import scala.jdk.FutureConverters._
 import scala.concurrent.{ExecutionContext, Future}
 
 // TODO: convert Google exceptions
@@ -38,9 +38,9 @@ private[service] class OpenAIVertexAIChatCompletionService(
   ): Future[ChatCompletionResponse] = {
     val model = createModel(messages, settings)
 
-    val javaFuture = model.generateContentAsync(toNonSystemVertexAI(messages))
+    val javaFuture = model.generateContentAsync(toNonSystemVertexAI(messages).asJava)
     val scalaFuture: Future[GenerateContentResponse] =
-      toScala(CompletableFuture.supplyAsync(() => javaFuture.get))
+      CompletableFuture.supplyAsync(() => javaFuture.get).asScala
 
     scalaFuture.map { response =>
       toOpenAI(response, settings.model)
@@ -53,7 +53,7 @@ private[service] class OpenAIVertexAIChatCompletionService(
   ): Source[ChatCompletionChunkResponse, NotUsed] = {
     val model = createModel(messages, settings)
 
-    val javaStream = model.generateContentStream(toNonSystemVertexAI(messages))
+    val javaStream = model.generateContentStream(toNonSystemVertexAI(messages).asJava)
     val scalaStream = StreamConverters.fromJavaStream(() => javaStream.stream())
 
     scalaStream.map { response =>

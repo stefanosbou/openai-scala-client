@@ -1,7 +1,7 @@
 package io.cequence.openaiscala.service
 
-import akka.stream.scaladsl.Source
-import akka.util.ByteString
+import org.apache.pekko.stream.scaladsl.Source
+import org.apache.pekko.util.ByteString
 import io.cequence.openaiscala.domain.Batch._
 import io.cequence.openaiscala.domain.response._
 import io.cequence.openaiscala.domain.settings._
@@ -420,7 +420,7 @@ trait OpenAIService extends OpenAICoreService {
   ): Future[Option[String]]
 
   /**
-   * Returns the contents of the specified file as an Akka source.
+   * Returns the contents of the specified file as an Pekko source.
    *
    * @param fileId
    *   The ID of the file to use for this request

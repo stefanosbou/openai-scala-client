@@ -1,7 +1,7 @@
 package io.cequence.openaiscala.service
 
-import akka.actor.ActorSystem
-import akka.stream.Materializer
+import org.apache.pekko.actor.ActorSystem
+import org.apache.pekko.stream.Materializer
 import com.google.inject.{AbstractModule, Provider}
 import com.typesafe.config.Config
 import net.codingwell.scalaguice.ScalaModule
@@ -29,7 +29,7 @@ object Providers {
   }
 }
 
-class AkkaModule(includeExecutionContext: Boolean = true)
+class PekkoModule(includeExecutionContext: Boolean = true)
     extends AbstractModule
     with ScalaModule {
 

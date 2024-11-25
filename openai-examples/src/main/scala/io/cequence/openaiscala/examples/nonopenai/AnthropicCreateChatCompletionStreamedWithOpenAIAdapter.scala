@@ -1,7 +1,7 @@
 package io.cequence.openaiscala.examples.nonopenai
 
-import akka.NotUsed
-import akka.stream.scaladsl.{RestartSource, Sink, Source}
+import org.apache.pekko.NotUsed
+import org.apache.pekko.stream.scaladsl.{RestartSource, Sink, Source}
 import io.cequence.openaiscala.OpenAIScalaClientException
 import io.cequence.openaiscala.domain.settings.CreateChatCompletionSettings
 import io.cequence.openaiscala.domain.{NonOpenAIModelId, SystemMessage, UserMessage}

@@ -1,6 +1,6 @@
 package io.cequence.openaiscala.service
 
-import akka.stream.Materializer
+import org.apache.pekko.stream.Materializer
 import com.typesafe.config.{Config, ConfigFactory}
 import io.cequence.wsclient.ConfigImplicits._
 import io.cequence.wsclient.domain.WsRequestContext

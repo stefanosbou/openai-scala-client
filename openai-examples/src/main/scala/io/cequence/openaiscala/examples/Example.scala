@@ -1,7 +1,7 @@
 package io.cequence.openaiscala.examples
 
-import akka.actor.{ActorSystem, Scheduler}
-import akka.stream.Materializer
+import org.apache.pekko.actor.{ActorSystem, Scheduler}
+import org.apache.pekko.stream.Materializer
 import io.cequence.openaiscala.domain.response.ChatCompletionResponse
 import io.cequence.openaiscala.service.{OpenAIService, OpenAIServiceFactory}
 import io.cequence.wsclient.service.CloseableService

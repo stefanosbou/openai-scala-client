@@ -1,6 +1,6 @@
 package io.cequence.openaiscala.service
 
-import akka.testkit.TestKit
+import org.apache.pekko.testkit.TestKit
 import io.cequence.openaiscala.domain.{
   AssistantMessage,
   BaseMessage,
@@ -9,7 +9,7 @@ import io.cequence.openaiscala.domain.{
   UserMessage
 }
 import io.cequence.openaiscala.domain.settings.CreateChatCompletionSettings
-import akka.actor.ActorSystem
+import org.apache.pekko.actor.ActorSystem
 import com.typesafe.config.{Config, ConfigFactory}
 import io.cequence.openaiscala.domain.AssistantTool.FunctionTool
 import org.scalatestplus.mockito.MockitoSugar

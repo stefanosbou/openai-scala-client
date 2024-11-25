@@ -1,7 +1,7 @@
 package io.cequence.openaiscala
 
-import akka.actor.Scheduler
-import akka.pattern.after
+import org.apache.pekko.actor.Scheduler
+import org.apache.pekko.pattern.after
 import io.cequence.openaiscala.RetryHelpers.{RetrySettings, retry}
 import org.slf4j.LoggerFactory
 
