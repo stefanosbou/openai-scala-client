@@ -61,7 +61,7 @@ The currently supported Scala versions are **2.13**, and **3**.
 To install the library, add the following dependency to your *build.sbt*
 
 ```
-"io.cequence" %% "openai-scala-client-pekko" % "1.1.0"
+"io.cequence" %% "openai-scala-client" % "1.1.0-pekko"
 ```
 
 or to *pom.xml* (if you use maven)
@@ -70,11 +70,11 @@ or to *pom.xml* (if you use maven)
 <dependency>
     <groupId>io.cequence</groupId>
     <artifactId>openai-scala-client_2.12</artifactId>
-    <version>1.1.0</version>
+    <version>1.1.0-pekko</version>
 </dependency>
 ```
 
-If you want streaming support, use `"io.cequence" %% "openai-scala-client-stream" % "1.1.0"` instead.
+If you want streaming support, use `"io.cequence" %% "openai-scala-client-stream" % "1.1.0-pekko"` instead.
 
 ## Config ⚙️
 
